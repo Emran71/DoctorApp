@@ -51,7 +51,6 @@
         <table cellpadding="0" cellspacing="0">
             <tr>
                 <th scope="col"><?= __('Id') ?></th>
-                <th scope="col"><?= __('Patient Id') ?></th>
                 <th scope="col"><?= __('Doctor Id') ?></th>
                 <th scope="col"><?= __('App Date') ?></th>
                 <th scope="col"><?= __('Created') ?></th>
@@ -60,8 +59,8 @@
             <?php foreach ($patient->appointments as $appointments): ?>
             <tr>
                 <td><?= h($appointments->id) ?></td>
-                <td><?= h($appointments->patient_id) ?></td>
-                <td><?= h($appointments->doctor_id) ?></td>
+
+                <td><?= $this->format->getName($appointments->doctor_id,'doctors') ?></td>
                 <td><?= h($appointments->app_date) ?></td>
                 <td><?= h($appointments->created) ?></td>
                 <td class="actions">
@@ -80,7 +79,6 @@
         <table cellpadding="0" cellspacing="0">
             <tr>
                 <th scope="col"><?= __('Id') ?></th>
-                <th scope="col"><?= __('Patient Id') ?></th>
                 <th scope="col"><?= __('Amount') ?></th>
                 <th scope="col"><?= __('Service') ?></th>
                 <th scope="col"><?= __('Due') ?></th>
@@ -90,8 +88,7 @@
             <?php foreach ($patient->invoices as $invoices): ?>
             <tr>
                 <td><?= h($invoices->id) ?></td>
-                <td><?= h($invoices->patient_id) ?></td>
-                <td><?= h($invoices->amount) ?></td>
+              <td><?= h($invoices->amount) ?></td>
                 <td><?= h($invoices->service) ?></td>
                 <td><?= h($invoices->due) ?></td>
                 <td><?= h($invoices->created) ?></td>

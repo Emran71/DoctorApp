@@ -21,7 +21,6 @@
                 <th scope="col"><?= $this->Paginator->sort('address') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('city') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('zipcode') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('created') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
@@ -35,7 +34,6 @@
                 <td><?= h($patient->address) ?></td>
                 <td><?= h($patient->city) ?></td>
                 <td><?= h($patient->zipcode) ?></td>
-                <td><?= h($patient->created) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $patient->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $patient->id]) ?>
