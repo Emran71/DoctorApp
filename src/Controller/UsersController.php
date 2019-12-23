@@ -103,7 +103,7 @@ class UsersController extends AppController
 
         return $this->redirect(['action' => 'index']);
     }
-    piblic function logout(){
+    public function logout(){
         
     }
 }
